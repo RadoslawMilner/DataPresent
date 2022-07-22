@@ -70,6 +70,7 @@ GEM
     bootsnap (1.12.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    chartkick (4.2.0)
     concurrent-ruby (1.1.10)
     countries (5.1.1)
       sixarm_ruby_unaccent (~> 1.1)
@@ -191,6 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  chartkick
   countries
   debug
   faker

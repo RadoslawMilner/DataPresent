@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "statistics#index"
   get 'statistics/index'
 
-  resources :charts do
+  resources :charts, only: [] do
     # to get search routes use collection. moreover we don't need /id to that
     collection do
       get 'sporters_by_age'

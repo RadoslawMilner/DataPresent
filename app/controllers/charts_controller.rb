@@ -5,4 +5,13 @@ class ChartsController < ApplicationController
     # by using render json:, we are converting all the model instances into JSON.
     # https://buttercms.com/blog/json-serialization-in-rails-a-complete-guide/
     render json: [{name: 'Count', data: result}]
+  def sporters_by_country
+    # new hash with result
+    result = {}
+    # gather all countries and each of them map to new array
+    Country.all.map do |c|
+      result[c.name] = c.sporters.count
+    end
+    render json: [{name: 'Count', data: result}].count.chart_json
+  end
 end

@@ -1,4 +1,5 @@
 module StatisticsHelper
+  # method to present data by age
   def sporters_by_age
     # use defined method bar_chart from chartkick
     # draw chart
@@ -16,6 +17,23 @@ module StatisticsHelper
       xAxis: { 
         title: {
           text: 'Age'
+        }
+      }
+    }
+  end
+
+  # method to present athletes with countries
+  def sporters_by_country
+    column_chart sporters_by_country_charts_path, library: {
+      title: { text: 'Sporters by country', x: -20},
+      yAxis: {
+        title: {
+          text: 'Sporters count'
+        }
+      },
+      xAxis: {
+        title: {
+          text: 'Country'
         }
       }
     }

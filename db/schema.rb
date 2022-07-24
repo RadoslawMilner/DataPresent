@@ -11,9 +11,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_07_22_080810) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "competition_results", force: :cascade do |t|
-    t.integer "sporter_id", null: false
-    t.integer "competition_id", null: false
+    t.bigint "sporter_id", null: false
+    t.bigint "competition_id", null: false
     t.integer "place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -36,7 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_080810) do
   create_table "sporters", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.integer "country_id", null: false
+    t.bigint "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_sporters_on_country_id"

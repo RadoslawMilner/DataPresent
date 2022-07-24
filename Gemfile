@@ -57,6 +57,9 @@ gem "faker"
 # Create beautiful JavaScript charts with one line of Ruby
 gem "chartkick"
 
+# It allows you to group records by year, month, day, and more
+gem "groupdate"
+
 # postgres
 gem 'pg'
 

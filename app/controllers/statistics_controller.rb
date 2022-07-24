@@ -1,5 +1,6 @@
 class StatisticsController < ApplicationController
   def index
-    @sporters - Sporter.all
+    # just list all sporters
+    # @sporters = Sporter.all
   end
 end

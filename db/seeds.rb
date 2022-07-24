@@ -23,8 +23,8 @@ Competition.all.each do |c|
   sporters = Sporter.all.shuffle.first(10)
   (1..10).each do |spot|
     CompetitionResult.create({ 
-      sporter_id: sporters.pop.id
-      competition_id: competition.id
+      sporter_id: sporters.pop.id,
+      competition_id: competition.id,
       place: place,
       created_at: rand(1.years.ago..Time.now)
     })

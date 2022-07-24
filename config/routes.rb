@@ -4,4 +4,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "statistics#index"
   get 'statistics/index'
+
+  resources :charts do
+    # to get search routes use collection. moreover we don't need /id to that
+    collection do
+      get 'sporters_by_age'
+    end
+  end
 end

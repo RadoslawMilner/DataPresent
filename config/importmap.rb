@@ -6,6 +6,6 @@ pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 
-pin "highcharts" # @10.2.0
-
+# according to chartkick documantation
 pin "chartkick", to: "chartkick.js"
+pin "highcharts" # @10.2.0

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     # to get search routes use collection. moreover we don't need /id to that
     collection do
       get 'sporters_by_age'
+      get 'sporters_by_country'
     end
   end
 end

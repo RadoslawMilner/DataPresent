@@ -15,4 +15,7 @@ Ruby version
 In this project, I will create & learn how to implement Chartkick into rails to create graphs, present data and discover some hightop gems.
 
 Ok...the problem can be in database.
-Ok. Database problem solved. But still
+Ok. Database problem solved. But still it doesn't render
+I can draw some additional graphs
+
+I want to add some more graphs but there is problem with sporters

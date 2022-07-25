@@ -14,6 +14,6 @@ class ChartsController < ApplicationController
     Country.all.map do |c|
       result[c.name] = c.sporters.count
     end
-    render json: [{name: 'Count', data: result}].count.chart_json
+    render json: [{name: 'Count', data: result}]
   end
 end

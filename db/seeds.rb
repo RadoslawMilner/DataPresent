@@ -2,7 +2,7 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
 ISO3166::Country.all.shuffle.first(30).each do |country|
-  Country.create({name: country.name})
+  Country.create({name: country })
 end
 
 100.times { Sporter.create(
@@ -24,8 +24,8 @@ Competition.all.each do |c|
   (1..10).each do |spot|
     CompetitionResult.create({ 
       sporter_id: sporters.pop.id,
-      competition_id: competition.id,
-      place: place,
+      competition_id: c.id,
+      place: spot,
       created_at: rand(1.years.ago..Time.now)
     })
   end

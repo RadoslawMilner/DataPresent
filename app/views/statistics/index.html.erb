@@ -1,8 +1,3 @@
 <h1>Statistics</h1>
 
-<!-- use our method to present data in view -->
-<%# <%= bar_chart @sporters.group(:age).count %>
-
 <%= sporters_by_country %>
-
-<%= line_chart Sporter.group_by_day(:created_at).count %>

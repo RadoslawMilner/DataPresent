@@ -2,8 +2,5 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-// we are using Highcharts. why specifically Highcharts? why not?
-import "chartkick/chart.js"
-import Highcharts from "highcharts"
-
-window.Highcharts = Highcharts
+import "chartkick"
+import "Chart.bundle"

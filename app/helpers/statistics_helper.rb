@@ -38,4 +38,20 @@ module StatisticsHelper
       }
     }
   end
+
+  def results_by_country
+  column_chart results_by_country_charts_path, stacked: true, height: '500px', library: {
+      title: {text: 'Results by country', x: -20},
+      yAxis: {
+          title: {
+              text: 'Count'
+          }
+      },
+      xAxis: {
+          title: {
+              text: 'Countries and places'
+          }
+      }
+  }
+  end
 end

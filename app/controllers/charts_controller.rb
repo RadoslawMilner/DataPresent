@@ -15,4 +15,18 @@ class ChartsController < ApplicationController
       result[c.name] = c.sporters.count
     end
   end
+
+  def results_by_country
+    result = Country.all.map do |c|
+      places = {}
+      (1..10).each do |spot|
+        places[spot] = c.sporters.joins(:competition_results).
+            where("competition_results.place = #{place}").count
+      end
+      {
+          name: c.name,
+          data: places
+      }
+    end
+  end
 end

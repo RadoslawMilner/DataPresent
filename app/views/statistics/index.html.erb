@@ -1,3 +1,9 @@
 <h1>Statistics</h1>
 
-<%= sporters_by_country %>
+<%= pie_chart Sporter.group(:age).count %>
+
+<%= line_chart Country.all.map { |country|
+    {name: country.name, data: country.sporters.group_by_week(:created_at).count}
+} %>
+
+<%= results_by_country %>

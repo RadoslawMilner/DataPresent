@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     collection do
       get 'sporters_by_age'
       get 'sporters_by_country'
+      get 'results_by_country'
     end
   end
 end

@@ -4,3 +4,6 @@ import "controllers"
 
 import "chartkick"
 import "Chart.bundle"
+
+//= require jquery
+//= require jquery_ujs
